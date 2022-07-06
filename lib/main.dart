@@ -1,4 +1,4 @@
-import 'package:classwork/assignments/week1_assignment.dart';
+import 'package:classwork/assignments/classwork.dart';
 import 'package:flutter/material.dart';
 
 
@@ -16,10 +16,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-
+        fontFamily: "Montserrat",
         primarySwatch: Colors.lightGreen,
       ),
-      home: const WeekOneAssignmentBPage(title: 'Flutter Demo Home Page'),
+      home: const ClassWorkPage(title: 'Flutter Demo Home Page'),
     );
   }
 }

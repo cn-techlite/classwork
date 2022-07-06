@@ -45,7 +45,7 @@ class _MyHomePageState extends State<WeekOneAssignmentBPage> {
               children: <Widget>[
                 const Text(
                   'Essay About Myself',
-                  style: TextStyle(fontSize: 16,fontFamily: "Roboto",color: Colors.black,fontWeight: FontWeight.normal),
+                  style: TextStyle(fontSize: 16,color: Colors.black,fontWeight: FontWeight.normal),
                 ),
                const SizedBox(height: 40,),
                 const Text(
@@ -68,16 +68,38 @@ class _MyHomePageState extends State<WeekOneAssignmentBPage> {
                       "Senior Executive Program and the Chief Executive Officer Program. He also attended the Kellogg School "
                       "of Management of Northwestern University,[28] Saïd Business School of Oxford University[29] and the "
                       "Judge Business School of Cambridge University.",
-                  style: TextStyle(fontSize: 16,fontFamily: "Roboto",color: Colors.black,fontWeight: FontWeight.normal),
+                  style: TextStyle(fontSize: 16,color: Colors.black,fontWeight: FontWeight.normal),
                 ),
-
+                Image.asset("assets/images/myimage.png",height: 100.50,width: 200,fit: BoxFit.none,),
+                Image.network("https://c.neh.tw/thumb/f/720/comhiclipartclrxh.jpg"),
                 Text(
                   'Subtractions $_counter1',
-                  style: Theme.of(context).textTheme.headline4,
                 ),
                 Text(
                   'Multiplications $_counter2',
-                  style: Theme.of(context).textTheme.headline4,
+                ),
+                Center(
+                  child: Column(
+                    children: List.generate(3, (index) =>   InputChip(
+                      avatar: const Icon(Icons.remove),
+                      label: const Text('Input 1'),
+                      onSelected: (bool value) {},
+                    ),)
+                  ),
+                ),
+                Container(
+                  margin: const EdgeInsets.only(top: 30,left: 30,right: 30,bottom: 30),
+                  height: 300,
+                  width: 300,
+                  color: Colors.green,
+                  decoration: BoxDecoration(
+                    color: Colors.purple,
+                    border: Border.all(width: 8,color: Colors.grey,),
+                    borderRadius: const BorderRadius.only(topLeft: Radius.circular(20)),
+                    image: const DecorationImage(
+                      image: NetworkImage(""),
+                    )
+                  ),
                 ),
               ],
             ),
