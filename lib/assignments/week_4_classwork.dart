@@ -87,6 +87,7 @@ class _MyHomePageState extends State<Week4ClassWorkPage> {
                 ))
               ],
             ),
+            const   SizedBox(height: 20,),
             Row(
               children: [
                 Expanded(child: Container(
