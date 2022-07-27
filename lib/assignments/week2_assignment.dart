@@ -54,6 +54,8 @@ class _MyHomePageState extends State<Week2AssignmentPage> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: const [
                       Text(
                         'Rev Ryan Fray',
