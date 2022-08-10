@@ -79,6 +79,7 @@ class _MyHomePageState extends State<Week2AssignmentPage> {
                       ),
                     ],
                   ),
+
                   const Icon(Icons.favorite,color: Colors.red,size: 18,),
                 ],
               ),
