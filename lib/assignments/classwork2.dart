@@ -417,7 +417,7 @@ class _MyHomePageState extends State<RegisterPage> {
                     ),
                     GestureDetector(
                       onTap: () {
-
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>const LoginPage()));
                       },
                       child: Text(
                         "Login",
@@ -563,7 +563,7 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ),
             Center(
-                child: Row(
+                child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
