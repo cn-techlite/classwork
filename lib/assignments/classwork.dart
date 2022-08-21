@@ -1,4 +1,6 @@
 
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 class ClassWorkPage extends StatefulWidget {
@@ -10,8 +12,21 @@ class ClassWorkPage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<ClassWorkPage> {
-
-
+  var listQuotes = ["Spread love everywhere you go. Let no one ever come to you without leaving happier.",
+    "When you reach the end of your rope, tie a knot in it and hang on. -Franklin D. Roosevelt",
+    "Always remember that you are absolutely unique. Just like everyone else. -Margaret Mead",
+    "Always remember that you are absolutely unique. Just like everyone else. -Margaret Mead",
+    "Don't judge each day by the harvest you reap but by the seeds that you plant. -Robert Louis Stevenson"
+  ];
+  int? index = 0;
+  generateRandomString() {
+    var r = Random();
+    int v = r.nextInt(listQuotes.length);
+    setState(() {
+      index = v;
+    });
+    print(index);
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,10 +46,10 @@ class _MyHomePageState extends State<ClassWorkPage> {
                 textAlign: TextAlign.center,
               ),
             ),
-            const Padding(padding: EdgeInsets.only(left: 74,right: 75,top: 23),
+             Padding(padding: const EdgeInsets.only(left: 4,right: 5,top: 23),
               child: Text(
-                'Receive notifications when you get celebrated',
-                style: TextStyle(fontSize: 16,color: Colors.white,fontWeight: FontWeight.w400,
+                listQuotes[index!],
+                style: const TextStyle(fontSize: 16,color: Colors.white,fontWeight: FontWeight.w400,
                   fontFamily: "Open sans",fontStyle: FontStyle.normal,
                 ),
                 textAlign: TextAlign.center,
@@ -42,6 +57,9 @@ class _MyHomePageState extends State<ClassWorkPage> {
             ),
             Padding(padding: const EdgeInsets.only(left: 120,right: 120,top: 45),
               child:  GestureDetector(
+                onTap: (){
+                  generateRandomString();
+                },
                 child:   Container(
                     alignment: Alignment.center,
                     height: 58,

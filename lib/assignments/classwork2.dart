@@ -1,4 +1,5 @@
 
+import 'package:classwork/assignments/classwork.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -581,6 +582,20 @@ class _LoginPageState extends State<LoginPage> {
                       },
                       child: Text(
                         "Create Account",
+                        style: GoogleFonts.roboto(
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold,
+                            fontStyle: FontStyle.normal,
+                            color: Colors.blue
+                        ),
+                      ),
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>const ClassWorkPage(title: '',)));
+                      },
+                      child: Text(
+                        "Move to Random Page",
                         style: GoogleFonts.roboto(
                             fontSize: 15,
                             fontWeight: FontWeight.bold,
