@@ -476,7 +476,7 @@ class _LoginPageState extends State<LoginPage> {
             ),
 
             Padding(
-              padding:EdgeInsets.only(left: 8,right: 8,top: 50),
+              padding:const EdgeInsets.only(left: 8,right: 8,top: 50),
               child: TextFormField(
                   obscureText: false,
                   autovalidateMode:
@@ -590,12 +590,13 @@ class _LoginPageState extends State<LoginPage> {
                         ),
                       ),
                     ),
+                    const SizedBox(height: 20,),
                     GestureDetector(
                       onTap: () {
                         Navigator.push(context, MaterialPageRoute(builder: (context)=>const ClassWorkPage(title: '',)));
                       },
                       child: Text(
-                        "Move to Random Page",
+                        "Quote Page",
                         style: GoogleFonts.roboto(
                             fontSize: 15,
                             fontWeight: FontWeight.bold,
