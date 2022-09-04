@@ -1,5 +1,6 @@
-import 'package:classwork/assignments/classwork2.dart';
 import 'package:flutter/material.dart';
+
+import 'assignment2/assignment_1.dart';
 
 
 
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
         fontFamily: "Montserrat",
         primarySwatch: Colors.lightGreen,
       ),
-      home: const LoginPage(),
+      home: const Assignment10(title: '',),
     );
   }
 }
