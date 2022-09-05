@@ -18,7 +18,7 @@ class _MyHomePageState extends State<Assignment10> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: Icon(Icons.arrow_drop_up_outlined,size: 34,),
+        leading: const Icon(Icons.arrow_drop_up_outlined,size: 34,),
         elevation: 0,
         backgroundColor: Colors.white,
         actions: const [
