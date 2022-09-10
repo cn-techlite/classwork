@@ -1,6 +1,5 @@
+import 'package:classwork/webapi/product_view.dart';
 import 'package:flutter/material.dart';
-import 'webapi/api_stream_builder.dart';
-import 'webapi/web_api_class.dart';
 
 
 
@@ -20,7 +19,7 @@ class MyApp extends StatelessWidget {
         fontFamily: "Montserrat",
         primarySwatch: Colors.lightGreen,
       ),
-      home: const StreamBuildPage(),
+      home: const ProductViewPage(title: '',),
     );
   }
 }
